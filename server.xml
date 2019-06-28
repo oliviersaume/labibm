@@ -18,11 +18,11 @@ Fri Jun 28 12:26:20 UTC 2019--><server>
 <!-- <variable name="DERBY_JDBC_DRIVER_PATH" value="${WAS_INSTALL_ROOT}/derby/lib"/> -->
     <variable name="DERBY_JDBC_DRIVER_PATH" value="/config/lib"/>
     <dataSource id="PBW XA DataSource" jdbcDriverRef="Derby_JDBC_Provider_(XA)" jndiName="jdbc/PlantsByWebSphereDataSource">
-        <properties.derby.embedded databaseName="/config/lib/PLANTSDB" name="PBW XA DataSource"/>
+        <properties.derby.embedded databaseName="/binary/lib/PLANTSDB" name="PBW XA DataSource"/>
         <connectionManager agedTimeout="0" connectionTimeout="180" maxIdleTime="1800" maxPoolSize="10" minPoolSize="0" reapTime="180"/>
     </dataSource>
     <dataSource id="PBW non-JTA DataSource" jdbcDriverRef="Derby_JDBC_Provider_(XA)" jndiName="jdbc/PlantsByWebSphereDataSourceNONJTA">
-        <properties.derby.embedded databaseName="/config/lib/PLANTSDB" name="PBW non-JTA DataSource"/>
+        <properties.derby.embedded databaseName="/binary/lib/PLANTSDB" name="PBW non-JTA DataSource"/>
         <connectionManager agedTimeout="0" connectionTimeout="180" maxIdleTime="1800" maxPoolSize="10" minPoolSize="0" reapTime="180"/>
     </dataSource>
     <jdbcDriver id="Derby_JDBC_Provider_(XA)" javax.sql.DataSource="org.apache.derby.jdbc.EmbeddedXADataSource">
